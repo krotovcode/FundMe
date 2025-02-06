@@ -3,8 +3,13 @@ pragma solidity ^0.8.18;
 
 contract FundMe {
 
-    function fund() public {}
+    uint256 public myValue = 1;
+
+    function fund() public payable  {   
+        myValue = myValue + 2;
+        require(msg.value > 1e18, "not enough");
+    }
 
 
-    
+
 }

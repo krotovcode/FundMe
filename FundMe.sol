@@ -10,24 +10,26 @@ contract FundMe {
 
     function fund() public payable  {   
         myValue = myValue + 2;
-        require(msg.value > 1e18, "not enough");
+        require(msg.value > 1 ether, "not enough");
     }
 
     function getPrice() public view returns(uint256){
         AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
         (,int256 price,,,) = priceFeed.latestRoundData();
         return uint256 (price * 1e10);
-
     }
 
-    function getConversionRate() public {
+    function getPrice2() public view returns(uint256){
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        (,int256 price,,,) = priceFeed.latestRoundData();
+        return uint256 (price);
+    }
+
+    function getConversionRate(uint256 ethAmount) public view returns (uint256) {
         //0x694AA1769357215DE4FAC081bf1f309aDC325306
+        uint256 ethPrice = getPrice();
+        uint256 ethAmountInUsd = (ethAmount*ethPrice) / 1e18;
+        return ethAmountInUsd;
     }
-
-    function getVersion() public view returns (uint256) {
-        return    AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306).version();
-    }
-
-
 
 }

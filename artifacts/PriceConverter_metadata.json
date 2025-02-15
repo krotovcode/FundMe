@@ -8,16 +8,16 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "funder",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "ethAmount",
+						"type": "uint256"
 					}
 				],
-				"name": "adressToAmountFunded",
+				"name": "getConversionRate",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "amountFunded",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -26,33 +26,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "fund",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "funders",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "minUsd",
+				"name": "getPrice",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -77,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"FundMe.sol": "FundMe"
+			"PriceConverter.sol": "PriceConverter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -99,20 +73,12 @@
 				"dweb:/ipfs/QmTa99QHrJBn3SXDizquPBUiTxVCNKQrHgaWJhuds5Sce2"
 			]
 		},
-		"FundMe.sol": {
-			"keccak256": "0x4a783d924fdcd9cbe74f9245adfcfd37825b6ece580738861e3b8ce0459d71f6",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://a5f3c2ce75677cdb778c57c930684d072f1c62d25005da4b115676d30838d47e",
-				"dweb:/ipfs/QmSUhrnPKXVJVMRFaP5tcgGhLaXoWMihN5tSm5moNBF8c5"
-			]
-		},
 		"PriceConverter.sol": {
-			"keccak256": "0x6d6ea9ba19470705882a62f654787d2137ff21a2058ffb8854f601eb8da95677",
+			"keccak256": "0x884a543aec0c033effe8fb424e778083e506a365efc68dcbdba7a28486f16ed6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1d1115a1d6b00ad9d7f9b1ca908d66e96d1b8edde73e64f527101ff75bec6fd6",
-				"dweb:/ipfs/QmWiqFigtn7BbScHdBTJXVryynWTjNMtQ2UXxtArhmk8GM"
+				"bzz-raw://bc313e9be3653abe785d4523f5cc3642ec25230f112f7a1ca83c164193458f00",
+				"dweb:/ipfs/QmdjxkJ4AdLCF95sxwGG9gCRv86EPgfHszaEvJPXJFLzV2"
 			]
 		}
 	},
